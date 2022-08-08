@@ -1,9 +1,3 @@
-"""
-@Author:张时贰
-@Date:2022年08月08日
-@CSDN:张时贰
-@Blog:zhangshier.vip
-"""
 import os
 from datetime import datetime
 import sys
