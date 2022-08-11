@@ -55,6 +55,8 @@ Vercel部署，即仓库中`MongoDB.py`，将代码存放在MongoDB 数据库工
 
 # 定时运行
 
+立即导出可以在`shell`窗口中运行`python3 文件名`
+
 定时运行方法很多，以宝塔计划任务为例，定时Shell脚本示例，cd后跟py文件的绝对路径
 
 ```shell
