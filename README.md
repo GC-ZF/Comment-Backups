@@ -1,9 +1,10 @@
 <h1 align="center">Twikoo_Backup</h1>
 <p align="center">
-      			<a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+      			<a style="margin-inline:5px" target="_blank" href="">
 				<img  src="https://visitor-badge.glitch.me/badge?page_id=Twikoo_Backup" title="访客"/>
 			</a>
 </p>
+
 # 功能
 
 将[Twikoo](https://github.com/imaegoo/twikoo)评论数据定时备份
