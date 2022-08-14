@@ -1,5 +1,9 @@
 <h1 align="center">Twikoo_Backup</h1>
-
+<p align="center">
+      			<a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+				<img  src="https://visitor-badge.glitch.me/badge?page_id=Twikoo_Backup" title="访客"/>
+			</a>
+</p>
 # 功能
 
 将[Twikoo](https://github.com/imaegoo/twikoo)评论数据定时备份
@@ -63,5 +67,3 @@ Vercel部署，即仓库中`MongoDB.py`，将代码存放在MongoDB 数据库工
 cd /xxx/twikoo/mongodb/bin
 python3 backup.py
 ```
-# 访客统计
-<img src="https://profile-counter.glitch.me/Twikoo_Backup/count.svg">
