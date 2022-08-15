@@ -38,5 +38,5 @@ jobs:
         git config --global user.email "zhang15835765326@gmail.com"
         git config --global user.name "GC-ZF"
         git add -A
-        git commit -m "Updated twikoo" || exit 
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')更新备份" || exit 
         git push
