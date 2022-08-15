@@ -75,7 +75,7 @@ python3 backup.py
 
 此方法适合无服务器的人，如果你会工作流，可以将Action中的文件作为一个私有仓库(py中有密码所以不要做公有)，将修改好的`MongoDB.py`或`Private.py`放入仓库，修改`backup.yml`中30行为你的py文件名字，修改38、39、41行(如果你不会用git，可以不改，这项意义不大)
 
-目录结构如下
+目录结构示例
 ```
 │  MongoDB.py
 │  mongoimport.exe
