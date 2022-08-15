@@ -45,7 +45,7 @@ Vercel部署，即仓库中`MongoDB.py`，将代码存放在MongoDB 数据库工
 
 # 私有部署备份方案
 
-私有部署，即仓库中`Private.py`，代码存放位置任意，修改24行（清理备份delete_day）、29行（原始路径init_path）、30行（备份路径backup_path）,都用绝对路径，但不要在相同路径下，因为定时清理会清掉所有json文件
+私有部署，即仓库中`Private.py`，代码存放位置任意，修改24行（清理备份delete_day）、29行（原始路径init_path）、30行（备份路径backup_path）,都用绝对路径，但不要与私有部署在相同路径下，因为定时清理会清掉所有json文件
 
 ```tex
 # 私有部署日志文件示例
