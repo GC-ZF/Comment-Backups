@@ -60,11 +60,27 @@ Vercel部署，即仓库中`MongoDB.py`，将代码存放在MongoDB 数据库工
 
 # 定时运行
 
-立即导出可以在`shell`窗口中运行`python3 文件名`
+立即导出可以在`shell`窗口中运行`python3 文件名`，定时运行方法很多，`crontab -e`、宝塔计划任务、workflow...
 
-定时运行方法很多，以宝塔计划任务为例，定时Shell脚本示例，cd后跟py文件的绝对路径
+## 宝塔计划任务
+
+此方法适合有服务器的人，以宝塔计划任务为例，定时Shell脚本示例，cd后跟py文件的绝对路径
 
 ```shell
 cd /xxx/twikoo/mongodb/bin
 python3 backup.py
 ```
+
+## workflow
+
+此方法适合无服务器的人，如果你会工作流，可以将Action中的文件作为一个私有仓库(py中有密码所以不要做公有)，将修改好的`MongoDB.py`或`Private.py`放入仓库，修改`backup.yml`中30行为你的py文件名字，修改38、39、41行(如果你不会用git，可以不改，这项意义不大)
+
+目录结构如下
+```
+│  MongoDB.py
+│  mongoimport.exe
+│
+└─.github
+    └─workflows
+            backup.yml
+```	    
