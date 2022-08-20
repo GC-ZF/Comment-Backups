@@ -31,7 +31,6 @@ jobs:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
       run: |
         python MongoDB.py
-        MONGODB_URI
         
     - name: Record time  
       run: echo 备份记录 `date` >> date.log
