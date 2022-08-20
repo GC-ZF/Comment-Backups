@@ -26,7 +26,11 @@ jobs:
 
     - name: 设置时区
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
-      
+
+    - name: Record time  
+      run: |
+        echo 备份记录 `date` >> date.log
+        
     - name: Run python   # 运行py文件
       # 设置变量
       env:
@@ -34,9 +38,6 @@ jobs:
       run: |
         python MongoDB.py
         
-    - name: Record time  
-      run: |
-        echo 备份记录 `date` >> date.log
 
     - name: Commit and push if changed   # 将文件更新到仓库
       run: |
