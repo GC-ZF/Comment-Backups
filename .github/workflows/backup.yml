@@ -27,6 +27,9 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
       
     - name: Run python   # 运行py文件
+      # 设置变量
+      env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
       run: |
         python MongoDB.py
         
