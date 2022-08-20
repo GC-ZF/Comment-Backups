@@ -29,7 +29,7 @@ jobs:
 
     - name: Record time  
       run: |
-        echo 备份记录哈哈哈哈哈 `date` >> date.log
+        echo 备份记录 `date` >> date.log
         
     - name: Run python   # 运行py文件
       # 设置变量
