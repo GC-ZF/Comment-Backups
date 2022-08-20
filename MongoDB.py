@@ -16,7 +16,7 @@ class Logger ( object ):
         pass
 
 
-#sys.stdout = Logger ( "backuplog.txt" )  # 输出日志
+sys.stdout = Logger ( "backuplog.txt" )  # 输出日志
 print ( "--------------------------------------------------------------\n" )
 now_time = datetime.now ()  # 当前时间
 now_time_day = now_time.day  # 日
