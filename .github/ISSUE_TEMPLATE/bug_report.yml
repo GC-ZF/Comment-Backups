@@ -35,7 +35,7 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: 填写友链 | What kind of blog?
+      label: 填写友链 | input your blog information?
       description: 请描述你的问题现象 | A clear and concise description of what the bug is.
       placeholder: 请尽量提供截图来描述问题 | If applicable, add screenshots to help explain your problem
       value: 
