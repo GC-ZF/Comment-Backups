@@ -39,7 +39,8 @@ body:
       description: 请描述你的问题现象 | A clear and concise description of what the bug is.
       placeholder: 请尽量提供截图来描述问题 | If applicable, add screenshots to help explain your problem
       value: 
-        " name: 张时贰 \n
+        " 每个字段前请保留空格 \n
+          name: 张时贰 \n
           link: http://zhangshier.vip \n
           avatar: https://zhangshier.vip/Hexo_img/avatar.jpg \n
           descr: 环转码，爱敲代码的小张！"
