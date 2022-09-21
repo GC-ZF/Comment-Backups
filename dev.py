@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+import datetime
 import sys
 
 # 读入环境变量
@@ -83,7 +83,7 @@ class backupComment:
 if __name__ == "__main__":
     sys.stdout = Logger ( "backuplog.txt" )  # 输出日志
     print ( "--------------------------------------------------------------\n" )
-    nowTime = datetime.now ()  # 当前时间
+    nowTime = datetime.datetime.now ()  # 当前时间
     nowTimeday = nowTime.day  # 日
     data = f"{nowTime.year}年{nowTime.month}月{nowTime.day}日"
 
