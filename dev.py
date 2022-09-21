@@ -82,7 +82,7 @@ class backupComment:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger ( "backuplog.txt" )  # 输出日志
+    sys.stdout = Logger ( "backuplog.log" )  # 输出日志
     print ( "--------------------------------------------------------------\n" )
     nowTime = datetime.datetime.now ()  # 当前时间
     nowTimeday = nowTime.day  # 日
