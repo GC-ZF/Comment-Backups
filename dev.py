@@ -3,7 +3,8 @@ import datetime
 import sys
 
 # 读入环境变量
-MONGODB_URI = os.environ['MONGODB_URI']
+MONGODB_URI = os.environ[ 'MONGODB_URI' ]
+
 
 # 打印日志
 class Logger ( object ):
@@ -60,8 +61,8 @@ class backupComment:
         # 遍历依次删除过期备份
         for i in comment:
             if (overTime >= i):
-                print ( f"{i.year}年{i.month}月{i.day + 1}日" )
-                shell = 'rm ' + f"{i.year}年{i.month}月{i.day + 1}日" + '.json'
+                print ( f"{i.year}年{i.month}月{i.day}日" )
+                shell = 'rm Comment/' + f"{i.year}年{i.month}月{i.day}日" + '.json'
                 code = os.system ( shell )
 
     '''
@@ -87,9 +88,9 @@ if __name__ == "__main__":
     nowTimeday = nowTime.day  # 日
     data = f"{nowTime.year}年{nowTime.month}月{nowTime.day}日"
 
-    clean=backupComment()
+    clean = backupComment ()
     # clean.cleanFirst([15,30])
-    clean.cleanSecond(15)
+    clean.cleanSecond ( 15 )
     # MONGODB_URI = input('输入MONGODB_URI')
     commond = 'mongoexport --uri ' + f'{MONGODB_URI}' + ' --collection comment --forceTableScan --type json --out Comment/' + f"{nowTime.year}年{nowTime.month}月{nowTime.day}日.json"
     code = os.system ( commond )
