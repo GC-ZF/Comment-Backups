@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
     clean = backupComment ()
     # clean.cleanFirst([15,30])
-    clean.cleanSecond ( 15 )
+    clean.cleanSecond ( 2 )
     # MONGODB_URI = input('输入MONGODB_URI')
     commond = 'mongoexport --uri ' + f'{MONGODB_URI}' + ' --collection comment --forceTableScan --type json --out Comment/' + f"{nowTime.year}年{nowTime.month}月{nowTime.day}日.json"
     code = os.system ( commond )
