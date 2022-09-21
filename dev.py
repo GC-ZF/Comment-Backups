@@ -61,7 +61,7 @@ class backupComment:
         # 遍历依次删除过期备份
         for i in comment:
             if (overTime >= i):
-                print ( f"{i.year}年{i.month}月{i.day}日" )
+                print ( '删除' + f"{i.year}年{i.month}月{i.day}日" + '.json' )
                 shell = 'rm Comment/' + f"{i.year}年{i.month}月{i.day}日" + '.json'
                 code = os.system ( shell )
 
@@ -82,7 +82,7 @@ class backupComment:
 
 
 if __name__ == "__main__":
-    sys.stdout = Logger ( "backuplog.log" )  # 输出日志
+    sys.stdout = Logger ( "backuplog.txt" )  # 输出日志
     print ( "--------------------------------------------------------------\n" )
     nowTime = datetime.datetime.now ()  # 当前时间
     nowTimeday = nowTime.day  # 日
