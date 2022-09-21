@@ -34,7 +34,7 @@ class backupComment:
     def cleanFirst(self, deleteDays):
         self.deleteDays = deleteDays  # 每月15、30号清空备份
         if nowTimeday in deleteDays:
-            os.system ( 'rm Comment/ *.json -f' )  # 删除所有json
+            os.system ( 'rm Comment/*.json -f' )  # 删除所有json
             print ( data + " 清空备份文件" )
 
     # os.system ( 'rm backuplog.txt.txt -f' )     # 删除日志
