@@ -1,4 +1,7 @@
-'https://blog.csdn.net/weixin_51343683/article/details/120811195'
+'''
+https://blog.csdn.net/weixin_51343683/article/details/120811195
+日志测试，设定过期时间，删除备份文件
+'''
 import datetime
 import os
 
