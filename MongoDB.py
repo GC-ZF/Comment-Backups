@@ -29,7 +29,7 @@ if now_time_day in delete_day:
     print ( data + " 清空备份文件" )
     # os.system ( 'rm backuplog.txt.txt -f' )     # 删除日志
 # MONGODB_URI = input('输入MONGODB_URI')
-commond = 'mongoexport --uri ' + f'{MONGODB_URI}' + ' --collection comment --forceTableScan --type json --out ' + f"{now_time.year}年{now_time.month}月{now_time.day}日.json"
+commond = 'mongoexport --uri ' + f'{MONGODB_URI}' + ' --collection comment --forceTableScan --type json --out Comment/' + f"{now_time.year}年{now_time.month}月{now_time.day}日.json"
 code = os.system ( commond )
 if code == 0:
     print ( data + " 备份成功" )
