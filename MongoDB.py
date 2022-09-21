@@ -1,3 +1,6 @@
+'''
+旧版清理备份方案已不适用
+'''
 import os
 from datetime import datetime
 import sys
