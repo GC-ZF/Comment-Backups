@@ -55,7 +55,7 @@ class backupComment:
             comment[ i ] = datetime.datetime.strptime ( comment[ i ], "%Y年%m月%d日" ).date ()  # 格式化为202?-??-??
 
         nowTime = datetime.datetime.now ()  # 获取当前时间
-        overTime = (nowTime + datetime.timedelta ( days=-self.timed )).date ()  # 获取过期时间 .date()只要日期
+        overTime = (nowTime + datetime.timedelta ( days=-self.timed )).date ()  # 获取过期时间 .date()只要日期 ??-??
         # print ( "获取过期时间:", overTime )
 
         # 遍历依次删除过期备份
