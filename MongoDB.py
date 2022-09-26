@@ -121,8 +121,6 @@ class backupComment:
 
         jsonPath = 'Comment/' + f'{nowTime.year}年{nowTime.month}月{nowTime.day}日.json'
 
-
-
         '''
         方案一，一行一条数据
         例如：
@@ -131,7 +129,7 @@ class backupComment:
         '''
         with open ( jsonPath, 'w', encoding="UTF-8" ) as f:
             for line in output:
-                line=json.dumps(line)
+                line = json.dumps ( line )
                 f.writelines ( line + '\n' )
 
         '''
