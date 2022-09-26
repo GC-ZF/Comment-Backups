@@ -4,9 +4,8 @@ import sys
 import pymongo
 
 # 读入环境变量
-# MONGODB_URI = os.environ[ 'MONGODB_URI' ]
-MONGODB_URI = 'mongodb+srv://1310446718:zf632852@cluster0.i7omd.mongodb.net/?retryWrites=true&w=majority'
-DB_Name = 'myFirstDatabase'
+MONGODB_URI = os.environ[ 'MONGODB_URI' ]
+DB_Name = os.environ[ 'DB_Name' ]
 
 
 # 打印日志
