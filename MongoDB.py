@@ -9,6 +9,7 @@ import os
 import datetime
 import sys
 import pymongo
+import json
 
 # 读入环境变量
 MONGODB_URI = os.environ[ 'MONGODB_URI' ]
