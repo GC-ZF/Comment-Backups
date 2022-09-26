@@ -110,7 +110,7 @@ class backupComment:
             client.server_info ()  # 集群信息，如果调用失败说明连接有错误
             print ( data + " 备份成功" )
         except Exception:
-            print ( data + " 连接数据库失败，请检查变量MONGODB_URI、DB_NAME是否正确" )
+            print ( data + " 连接数据库失败，请检查变量MONGODB_URI是否正确" )
 
     def outputJson(self):
         output = [ ]  # 保存评论数据到列表
