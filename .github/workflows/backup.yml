@@ -39,7 +39,7 @@ jobs:
       # 设置变量
       env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          DB_Name: ${{ secrets.DB_NAME }}
+          DB_NAME: ${{ secrets.DB_NAME }}
       run: |
         python MongoDB.py
         
