@@ -1,12 +1,18 @@
 '''
-旧版清理备份方案已不适用
+旧版方案已不适用
+MongoDB Release1.0
+特性：
+    1.backuplog.log记录备份日志，workflows.log记录Actions运行日志
+    2.借助官方工具 mongoimport.exe 实现数据导出
+    3.delete_day = [ 15, 30 ]   每月15、30号清空所有Json文件
 '''
 import os
 from datetime import datetime
 import sys
 
 # 读入环境变量
-MONGODB_URI = os.environ['MONGODB_URI']
+MONGODB_URI = os.environ[ 'MONGODB_URI' ]
+
 
 class Logger ( object ):
     def __init__(self, fileN="Default.log"):

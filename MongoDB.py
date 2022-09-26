@@ -1,3 +1,10 @@
+'''
+MongoDB Release3.0
+特性：
+    1.backuplog.log记录备份日志，workflows.log记录Actions运行日志
+    2.借助 pymongo模块 实现数据导出（新增）
+    3.默认 clean.cleanSecond ( 15 ) 可自定义保留天数 保留1.0版 clean.cleanFirst([15,30]) 在指定日期清空所有备份记录
+'''
 import os
 import datetime
 import sys

@@ -1,3 +1,11 @@
+'''
+旧版方案已不适用
+MongoDB Release2.0
+特性：
+    1.backuplog.log记录备份日志，workflows.log记录Actions运行日志
+    2.借助官方工具 mongoimport.exe 实现数据导出
+    3.默认 clean.cleanSecond ( 15 ) 可自定义保留天数 保留1.0版 clean.cleanFirst([15,30]) 在指定日期清空所有备份记录（新增）
+'''
 import os
 import datetime
 import sys
@@ -89,8 +97,8 @@ if __name__ == "__main__":
     data = f"{nowTime.year}年{nowTime.month}月{nowTime.day}日"
 
     clean = backupComment ()
-    #clean.cleanFirst([15,30])  # 在每月15,30号清空备份
-    clean.cleanSecond ( 15 )    # 备份保留15天
+    # clean.cleanFirst([15,30])  # 在每月15,30号清空备份
+    clean.cleanSecond ( 15 )  # 备份保留15天
     # MONGODB_URI = input('输入MONGODB_URI')
     commond = 'mongoexport --uri ' + f'{MONGODB_URI}' + ' --collection comment --forceTableScan --type json --out Comment/' + f"{nowTime.year}年{nowTime.month}月{nowTime.day}日.json"
     code = os.system ( commond )

@@ -29,11 +29,11 @@ if __name__ == "__main__":
         comment[ i ] = datetime.datetime.strptime ( comment[ i ], "%Y年%m月%d日" ).date ()  # 格式化202?-??-??
 
     nowTime = datetime.datetime.now ()  # 获取当前时间
-    overTime = (nowTime + datetime.timedelta ( days=-timed )).date()  # 获取过期时间 .date()只要日期
+    overTime = (nowTime + datetime.timedelta ( days=-timed )).date ()  # 获取过期时间 .date()只要日期
     # print ( "获取过期时间:", overTime )
 
     for i in comment:
-        if(overTime>=i):
-            print(f"{i.year}年{i.month}月{i.day + 1}日")
+        if (overTime >= i):
+            print ( f"{i.year}年{i.month}月{i.day + 1}日" )
             shell = 'rm ' + f"{i.year}年{i.month}月{i.day + 1}日" + '.json'
-            code=os.system ( shell )
+            code = os.system ( shell )
