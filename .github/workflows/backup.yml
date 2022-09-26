@@ -29,12 +29,18 @@ jobs:
 
     - name: Record time  
       run: |
-        echo 备份记录 `date` >> workflows.log
+        echo Actions运行记录 `date` >> workflows.log
+    
+    - name: Install requirements    # 安装MongoDB模块
+      working-directory: ./Comment-Backups
+      run: |
+        pip install -r requirements.txt
         
     - name: Run python   # 运行py文件
       # 设置变量
       env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          DB_Name: ${{ secrets.myFirstDatabase }}
       run: |
         python MongoDB.py
         
