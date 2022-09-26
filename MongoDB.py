@@ -127,7 +127,7 @@ class backupComment:
         # 一行一条数据
         with open ( jsonPath, 'w', encoding="UTF-8" ) as f:
             for line in output:
-                line=simplejson.dumps(line)
+                line=json.dumps(line)
                 f.writelines ( line + '\n' )
 
 
