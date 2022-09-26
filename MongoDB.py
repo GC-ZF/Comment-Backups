@@ -133,7 +133,7 @@ class backupComment:
                 f.writelines ( line + '\n' )
 
         '''
-        方案一，标准的JSON格式
+        方案二，标准的JSON格式
         例如：
         	{
         	    "id":"001",
