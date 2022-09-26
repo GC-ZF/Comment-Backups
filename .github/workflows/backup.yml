@@ -32,7 +32,6 @@ jobs:
         echo Actions运行记录 `date` >> workflows.log
     
     - name: Install requirements    # 安装MongoDB模块
-      working-directory: ./Comment-Backups
       run: |
         pip install -r requirements.txt
         
