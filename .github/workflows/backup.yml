@@ -33,7 +33,7 @@ jobs:
     
     - name: Install requirements    # 安装MongoDB模块
       run: |
-        pip install -r requirements.txt
+        pip install -r ./requirements.txt
         
     - name: Run python   # 运行py文件
       # 设置变量
