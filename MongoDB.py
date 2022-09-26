@@ -121,15 +121,33 @@ class backupComment:
 
         jsonPath = 'Comment/' + f'{nowTime.year}年{nowTime.month}月{nowTime.day}日.json'
 
-        # 标准的JSON格式
-        # with open(jsonPath, 'w', encoding="UTF-8") as jf:
-        #     jf.write(json.dumps(output, indent=1))
 
-        # 一行一条数据
+
+        '''
+        方案一，一行一条数据
+        例如：
+        	{"id":"001","name":"小张"}
+        	{"id":"002","name":"张张"}
+        '''
         with open ( jsonPath, 'w', encoding="UTF-8" ) as f:
             for line in output:
                 line=json.dumps(line)
                 f.writelines ( line + '\n' )
+
+        '''
+        方案一，标准的JSON格式
+        例如：
+        	{
+        	    "id":"001",
+        	    "name":"小张"
+        	},
+        	{
+        	    "id":"002",
+        	    "name":"张张"
+        	}
+        '''
+        # with open(jsonPath, 'w', encoding="UTF-8") as jf:
+        #     jf.write(json.dumps(output, indent=1))
 
 
 if __name__ == "__main__":
