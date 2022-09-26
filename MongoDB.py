@@ -5,7 +5,7 @@ import pymongo
 
 # 读入环境变量
 MONGODB_URI = os.environ[ 'MONGODB_URI' ]
-DB_Name = os.environ[ 'DB_Name' ]
+DB_NAME = os.environ[ 'DB_NAME' ]
 
 
 # 打印日志
@@ -96,14 +96,14 @@ class backupComment:
         client = pymongo.MongoClient ( conn_str, serverSelectionTimeoutMS=5000 )
         # db = client.myFirstDatabase  # myFirstDatabase数据库
         # collection = db.comment  # comment表
-        db = client[ DB_Name ]  # myFirstDatabase数据库
+        db = client[ DB_NAME ]  # myFirstDatabase数据库
         global collection  # comment表
         collection = db[ 'comment' ]
         try:
             client.server_info ()  # 集群信息，如果调用失败说明连接有错误
             print ( data + " 备份成功" )
         except Exception:
-            print ( data + " 连接数据库失败，请检查变量MONGODB_URI、DB_Name是否正确" )
+            print ( data + " 连接数据库失败，请检查变量MONGODB_URI、DB_NAME是否正确" )
 
     def outputJson(self):
         output = [ ]  # 保存评论数据到列表
