@@ -1,6 +1,6 @@
 <!-- Twikoo图片 -->
 <p align="center">
-  <a href="https://v2.nonebot.dev/"><img src="https://github.com/imaegoo/twikoo/raw/main/docs/static/logo.png" width="300" alt="twikoo"></a>
+  <a href="https://github.com/imaegoo/twikoo"><img src="https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/logo.png" width="300" alt="twikoo"></a>
 </p>
 
 <h1 align="center">Comment-Backups</h1>
