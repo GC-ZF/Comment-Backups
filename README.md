@@ -79,29 +79,29 @@ fork项目仓库：[GC-ZF/Comment-Backups](https://github.com/GC-ZF/Comment-Back
 
 之后点击`Backup twikoo-->Enable workflow`启用工作流，然后点击`Run workflow`手动运行测试
 
-![Twikoo评论定时备份方案05](https://img.zhangshier.vip/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8805.png)
+![Twikoo评论定时备份方案05]([https://img.zhangshier.vip](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8805.png)
 
 Actions运行完成后出现绿色的对勾：✅，即成功部署。若出现红色的叉：❌，根据报错尝试修改，及[Comment-Backups | issue](https://github.com/GC-ZF/Comment-Backups/issues)提问
 
 ## 导入数据
 
-> 当评论数据发生**大量**丢失或错误无法手动修复时，可以将Github仓库中的备份数据导入。工欲善其事，必先利其器，首先选择一个好用的软件，这里推荐**『MongoDB』**自己开发的**『MongoDBCompass』**
+> 当评论数据发生**大量**丢失或错误无法手动修复时，可以将Github仓库中的备份数据导入。工欲善其事，必先利其器，首先选择一个好用的软件，这里推荐**『MongoDB』** 自己开发的 **『MongoDBCompass』**
 
 首先进入自己的twikoo数据库下，点击Connect。（旁边Browse Collections是软件的网页版，可以进行简单的查改操作，没有导入导出等功能）
 
-![Twikoo评论定时备份方案06](https://img.zhangshier.vip/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8806.png)
+![Twikoo评论定时备份方案06]([https://img.zhangshier.vip](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8806.png)
 
 选择MongoDB Compass连接，安装软件
 
-![Twikoo评论定时备份方案07](https://img.zhangshier.vip/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8807.png)
+![Twikoo评论定时备份方案07]([https://img.zhangshier.vip](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8807.png)
 
 切记将"\<password>"替换成自己的数据库密码，再在软件中输入连接字符串
 
-![Twikoo评论定时备份方案08](https://img.zhangshier.vip/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8808.png)
+![Twikoo评论定时备份方案08]([https://img.zhangshier.vip](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8808.png)
 
-**『MongoDBCompass』**可以帮助我们对评论增删改查，这样就拥有了类似tyepcho的评论后端，简单使用图解：
+**『MongoDBCompass』** 可以帮助我们对评论增删改查，这样就拥有了类似tyepcho的评论后端，简单使用图解：
 
-![Twikoo评论定时备份方案09](https://img.zhangshier.vip/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8809.png)
+![Twikoo评论定时备份方案09]([https://img.zhangshier.vip](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8809.png)
 
 恢复评论数据方法：
 
