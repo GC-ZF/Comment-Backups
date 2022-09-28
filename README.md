@@ -41,11 +41,11 @@
 
 fork项目仓库：[GC-ZF/Comment-Backups](https://github.com/GC-ZF/Comment-Backups)
 
-![Twikoo评论定时备份方案02](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo评论定时备份方案02.png)
+![Twikoo评论定时备份方案02](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8802.png)
 
 进入到自己的仓库，然后点击仓库的`Settings-->Secrets-->Actions-->New repository secret`
 
-![Twikoo评论定时备份方案03](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo评论定时备份方案03.png)
+![Twikoo评论定时备份方案03](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8803.png)
 
 添加环境变量secert：
 
@@ -64,7 +64,7 @@ fork项目仓库：[GC-ZF/Comment-Backups](https://github.com/GC-ZF/Comment-Back
 
 启用`fork`后仓库的`Github Actions`，点击`Actions-->I understand my workflows, go ahead and enable them`
 
-![Twikoo评论定时备份方案04](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo评论定时备份方案04.png)
+![Twikoo评论定时备份方案04](https://test1.jsdelivr.net/gh/GC-ZF/Comment-Backups/img/Twikoo%E8%AF%84%E8%AE%BA%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%8804.png)
 
 之后点击`Backup twikoo-->Enable workflow`启用工作流，然后点击`Run workflow`手动运行测试
 
