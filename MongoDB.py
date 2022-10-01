@@ -129,7 +129,7 @@ class backupComment:
         '''
         with open ( jsonPath, 'w', encoding="UTF-8" ) as f:
             for line in output:
-                line = json.dumps ( line )
+                line = json.dumps ( line, ensure_ascii=False )
                 f.writelines ( line + '\n' )
 
         '''
