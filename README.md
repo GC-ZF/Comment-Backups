@@ -85,6 +85,10 @@ fork项目仓库：[GC-ZF/Twikoo-Comment-Backups](https://github.com/GC-ZF/Twiko
 
 Actions运行完成后出现绿色的对勾：✅，即成功部署。若出现红色的叉：❌，根据报错尝试修改，及[Comment-Backups | issue](https://github.com/GC-ZF/Comment-Backups/issues)提问
 
+可能出现的错误：
+
+* `remote: Permission to denied to github-actions[bot].`，这是因为Actions没有读写权限导致，在Fork的仓库下依次点击`Settings-->Actions-->General-->拉到最下面勾选Read and write permissions-->Save`
+
 ## 导入数据
 
 > 当评论数据发生**大量**丢失或错误无法手动修复时，可以将Github仓库中的备份数据导入。工欲善其事，必先利其器，首先选择一个好用的软件，这里推荐 **『MongoDB』**自己开发的**『MongoDBCompass』**
