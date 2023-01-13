@@ -1,0 +1,55 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Twikoo Backups
+    
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:   
+  
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest   # 使用最新版ubuntu镜像 
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps: 
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2  
+      
+#     - name: Setup Python  # 安装python环境 
+#       uses: actions/setup-python@v1
+#       with:
+#         python-version: 3.7
+
+    - name: 设置时区
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+    - name: Record time  
+      run: |
+        echo Actions运行记录 `date` >> workflows.log
+    
+    - name: Install requirements    # 安装MongoDB模块
+      run: |
+        pip install -r ./requirements.txt
+        
+    - name: Run python   # 运行py文件
+      # 设置变量
+      env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+      run: |
+        python MongoDB.py
+        
+
+    - name: Commit and push if changed   # 将文件更新到仓库
+      run: |
+        ls -l
+        git diff
+        git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
+        git config --global user.email '${{ secrets.GITHUBEMAIL }}'
+        git add -A
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')更新备份" || exit 
+        git push

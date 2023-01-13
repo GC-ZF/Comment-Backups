@@ -1,0 +1,52 @@
+name: 申请加入友链
+description: 请填入你的博客名称
+title: '[friend]:'
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        重要：请依照模板提交
+        Please follow the template to create a new issue
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 网站运行了多长时间？ || How long has the site been up and running?
+      options:
+        - 新建没多久 || just soon
+        - 三个月 || three month
+        - 半年 || Half a year
+        - 一年及以上 || One year and above
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 什么类型的博客 || What kind of blog?
+      options:
+        - 技术栈
+        - 生活站
+        - 都有
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 填写友链 || input your blog information?
+      description: 请描述你的问题现象 | A clear and concise description of what the bug is.
+      placeholder: 请尽量提供截图来描述问题 | If applicable, add screenshots to help explain your problem
+      value: 
+        " 每个字段前请保留空格 \n
+          ```yml \n
+          name: 张时贰 \n
+          link: http://zhangshier.vip \n
+          avatar: https://zhangshier.vip/Hexo_img/avatar.jpg \n
+          descr: 环转码，爱敲代码的小张！ \n
+          ```\n
+        "
+    validations:
+      required: true
+     
