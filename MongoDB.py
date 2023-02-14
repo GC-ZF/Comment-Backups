@@ -106,14 +106,14 @@ class backupComment:
         conn_str = MONGODB_URI
 
         # set a 5-second connection timeout
-        client = pymongo.MongoClient ( conn_str, serverSelectionTimeoutMS=5000 )
+        self.client = pymongo.MongoClient ( conn_str, serverSelectionTimeoutMS=5000 )
         # db = client.myFirstDatabase  # myFirstDatabase数据库
         # collection = db.comment  # comment表
-        db = client[ DB_NAME ]  # myFirstDatabase数据库
+        db = self.client[ DB_NAME ]  # myFirstDatabase数据库
         global collection  # comment表
         collection = db[ 'comment' ]
         try:
-            client.server_info ()  # 集群信息，如果调用失败说明连接有错误
+            self.client.server_info ()  # 集群信息，如果调用失败说明连接有错误
             print ( data + " 备份成功" )
         except Exception:
             print ( data + " 连接数据库失败，请检查变量MONGODB_URI是否正确" )
@@ -127,7 +127,7 @@ class backupComment:
         for i in collection.find ():
             output.append ( i )
         # print ( output )
-    
+        self.client.close()
         # 创建一个保存备份的目录
         path = os.path.dirname ( __file__ )
         path = path + '/Comment'
