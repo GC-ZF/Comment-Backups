@@ -42,8 +42,8 @@ body:
         " 每个字段前请保留空格 \n
           ```yml \n
           name: 张时贰 \n
-          link: http://zhangshier.vip \n
-          avatar: https://zhangshier.vip/Hexo_img/avatar.jpg \n
+          link: http://zhsher.cn \n
+          avatar: https://zhsher.cn/Hexo_img/avatar.jpg \n
           descr: 环转码，爱敲代码的小张！ \n
           ```\n
         "

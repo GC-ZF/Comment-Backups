@@ -20,7 +20,7 @@
 
 > [Twikoo](https://github.com/imaegoo/twikoo)：一个简洁、安全、免费的静态网站评论系统
 
-本仓库是对于Twikoo Vercel+MongoDB 部署的数据备份方案，若图片加载不出来，博文地址：[Twikoo评论定时备份方案](https://zhangshier.vip/posts/33638/)
+本仓库是对于Twikoo Vercel+MongoDB 部署的数据备份方案，若图片加载不出来，博文地址：[Twikoo评论定时备份方案](https://zhsher.cn/posts/33638/)
 
 <!-- 博客正文 -->
 
@@ -209,6 +209,6 @@ clean.cleanSecond ( 15 )  # 方法二，备份保留15天
 > * 支持Valine、Disqus、Artalk、Twikoo数据迁移
 > * 评论人工审核
 > * 支持私有部署
-> * 支持自建的[兰空图床](https://zhangshier.vip/posts/10482/)（本来是没有的，小哥专门加的）
+> * 支持自建的[兰空图床](https://zhsher.cn/posts/10482/)（本来是没有的，小哥专门加的）
 > * 可以修改评论信息
 
