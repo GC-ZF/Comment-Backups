@@ -43,7 +43,12 @@ jobs:
       run: |
         python MongoDB.py
         
-    - name: Push to GitHub
-      uses: EndBug/add-and-commit@v7.2.1
-      with:
-        message: "$(date '+%Y-%m-%d %H:%M:%S')更新备份"
+    - name: Commit and push if changed   # 将文件更新到仓库
+      run: |
+        ls -l
+        git diff
+        git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
+        git config --global user.email '${{ secrets.GITHUBEMAIL }}'
+        git add -A
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S')更新备份" || exit 
+        git push
